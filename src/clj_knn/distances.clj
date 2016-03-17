@@ -1,10 +1,5 @@
-(ns clj-knn.distances)
-
-(defn square [x]
-  (* x x))
-
-(defn abs [x]
-  (max x (- x)))
+(ns clj-knn.distances
+  (:require [clj-knn.utils :refer [square abs]]))
 
 (defn euclidean [x y]
   {:pre [(vector? x) (vector? y)]
